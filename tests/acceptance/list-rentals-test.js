@@ -62,4 +62,5 @@ module('Acceptance | list rentals', function(hooks) {
     assert.ok(this.element.querySelector('.show-listing h2').textContent.includes("Grand Old Mansion"), 'should list rental title');
     assert.ok(this.element.querySelector('.show-listing .description'), 'should list a description of the property');
   });
+  
 });
