@@ -22,5 +22,6 @@
       <span>Number of bedrooms:</span> {{this.rental.bedrooms}}
     </div>
   </div>
+  {{#link-to "rentals.edit" rental class=rental.id}}Edit Listing{{/link-to}}
   <LocationMap @location={{this.rental.city}} />
 </article>

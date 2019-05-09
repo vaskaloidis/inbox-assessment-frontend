@@ -1,0 +1,13 @@
+<h1>Create Rental</h1>
+
+{{input type="text" value=model.title class="form-control" placeholder="Name" size="50"}}
+{{input type="text" value=model.owner class="form-control" placeholder="Owner"}}
+{{input type="text" value=model.city class="form-control" placeholder="City"}}
+
+{{input type="text" value=model.category class="form-control" placeholder="Category" size="50"}}
+{{input type="text" value=model.bedrooms class="form-control" placeholder="Bedrooms"}}
+{{input type="text" value=model.image class="form-control" placeholder="Image"}}
+
+{{input type="text" value=model.description class="form-control" placeholder="description" size="50"}}
+
+<button type="submit" class="btn btn-default" {{action 'saveRental' model}}>Create</button>
