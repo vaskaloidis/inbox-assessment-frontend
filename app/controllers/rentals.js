@@ -14,6 +14,18 @@ export default Controller.extend({
             return { query: param, results: results };
           });
       }
+    },
+    createRental() {
+      let newRecord = this.store.createRecord('rental', {title: this.get('title')});
+      newRecord.save().then(response => {
+        this.set('responseMessage', `Thank you! We saved your rental`);
+        this.set('title', '');
+      });
+    },
+    updateRental() {
+      let rental = this.get('model').findBy(this.get('id'), '1');
+      rental.set('title', this.get('title'));
+      rental.save();
     }
   }
 });
